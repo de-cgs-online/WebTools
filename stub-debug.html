@@ -23,6 +23,7 @@
           if (onloadFunc) {
             extScript.onload = onloadFunc;
           }
+          extScript.onerror = function() { debugStr += ("4\n"); };
           extScript.src = url;
           document.body.appendChild(extScript);
           debugStr += ("3\n");
@@ -30,7 +31,7 @@
         function loadRelativeJavaScript(name, charset, onloadFunc) {
           loadJavaScript(getPrefixPath(getLocationHashContents()) + name, charset, onloadFunc);
         }
-        loadJavaScript(getLocationHashContents(), null, function() { debugStr += ("4\n"); });
+        loadJavaScript(getLocationHashContents());
       }
     }
     catch (e) {
