@@ -18,7 +18,7 @@
         }
         function loadJavaScript(url, charset, onloadFunc) {
           debugStr += ("2: " + url + "\n");
-          var extScript = document.createElement("script");
+          extScript = document.createElement("script");
           extScript.type = "text/javascript";
           extScript.charset = charset || "utf-8";
           if (onloadFunc) {
