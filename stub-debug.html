@@ -30,7 +30,7 @@
         function loadRelativeJavaScript(name, charset, onloadFunc) {
           loadJavaScript(getPrefixPath(getLocationHashContents()) + name, charset, onloadFunc);
         }
-        loadJavaScript(getLocationHashContents());
+        loadJavaScript(getLocationHashContents(), null, function() { debugStr += ("4\n"); });
       }
     }
     catch (e) {
