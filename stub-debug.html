@@ -6,6 +6,7 @@
   <body></body>
   <script type="text/javascript">
     var debugStr = "Debug info:\n";
+    var extScript = {};
     try {
       debugStr += ("1: " + location.hash + "\n");
       if (location.hash && location.hash.length > 1) {
@@ -37,6 +38,6 @@
     catch (e) {
       debugStr += (e.message + "\n");
     }
-    alert(debugStr);
+    setTimeout(function() { alert(debugStr + extScript.complete); }, 3000);
   </script>
 </html>
