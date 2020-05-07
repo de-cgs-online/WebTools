@@ -1,2 +1,2 @@
 # WebTools index page
-[stub.html](stub.html)
+[bookmarklets.html](bookmarklets.html)
