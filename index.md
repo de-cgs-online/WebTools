@@ -1,2 +1,2 @@
-# WebTools index page
+## Sub-pages
 [bookmarklets.html](bookmarklets.html)
