@@ -8,7 +8,7 @@ for (var i=0; i<links.length; i++) {
 }
 document.body.innerHTML = "";
 var s = document.createElement("script");
-s.innerHTML = "    if (location.hash && location.hash.length > 1) {\n" +
+s.innerHTML = "alert('DEBUG');    if (location.hash && location.hash.length > 1) {\n" +
   "      function getLocationHashContents() {\n" +
   "        return location.hash.substr(1);\n" +
   "      }\n" +
