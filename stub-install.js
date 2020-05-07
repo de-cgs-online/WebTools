@@ -6,9 +6,9 @@ for (var i=0; i<links.length; i++) {
     break;
   }
 }
-
-document.body.innerHTML = "  <script type=\"text/javascript\">\n" +
-  "    if (location.hash && location.hash.length > 1) {\n" +
+document.body.innerHTML = "";
+var s = document.createElement("script");
+s.innerHTML = "    if (location.hash && location.hash.length > 1) {\n" +
   "      function getLocationHashContents() {\n" +
   "        return location.hash.substr(1);\n" +
   "      }\n" +
@@ -29,5 +29,5 @@ document.body.innerHTML = "  <script type=\"text/javascript\">\n" +
   "        loadJavaScript(getPrefixPath(getLocationHashContents()) + name, charset, onloadFunc);\n" +
   "      }\n" +
   "      loadJavaScript(getLocationHashContents());\n" +
-  "    }\n" +
-  "  </script>\n";
+  "    }\n";
+document.body.appendChild(s);
