@@ -8,26 +8,5 @@ for (var i=0; i<links.length; i++) {
 }
 document.body.innerHTML = "";
 var s = document.createElement("script");
-s.innerHTML = "alert('DEBUG');    if (location.hash && location.hash.length > 1) {\n" +
-  "      function getLocationHashContents() {\n" +
-  "        return location.hash.substr(1);\n" +
-  "      }\n" +
-  "      function getPrefixPath(url) {\n" +
-  "        return (url.match(/^.*\//) || [\"\"])[0];\n" +
-  "      }\n" +
-  "      function loadJavaScript(url, charset, onloadFunc) {\n" +
-  "        var extScript = document.createElement(\"script\");\n" +
-  "        extScript.type = \"text/javascript\";\n" +
-  "        extScript.charset = charset || \"utf-8\";\n" +
-  "        if (onloadFunc) {\n" +
-  "          extScript.onload = onloadFunc;\n" +
-  "        }\n" +
-  "        extScript.src = url;\n" +
-  "        document.body.appendChild(extScript);\n" +
-  "      }\n" +
-  "      function loadRelativeJavaScript(name, charset, onloadFunc) {\n" +
-  "        loadJavaScript(getPrefixPath(getLocationHashContents()) + name, charset, onloadFunc);\n" +
-  "      }\n" +
-  "      loadJavaScript(getLocationHashContents());\n" +
-  "    }\n";
+s.src = "https://de-cgs-online.github.io/WebTools/stub.js";
 document.body.appendChild(s);
